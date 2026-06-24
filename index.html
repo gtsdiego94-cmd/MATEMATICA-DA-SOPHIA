@@ -1,3 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Matemática da Sofia</title><link rel="stylesheet" href="style.css"></head>
 <body><h1>🌟 Matemática da Sofia</h1><p>Projeto educacional da Sofia</p><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matemática da Sofia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🌟 Matemática da Sofia</h1>
+  <p>Aprendendo com calma, alegria e confiança</p>
+</header>
+
+<main>
+  <section id="inicio" class="tela ativa">
+    <div class="card principal">
+      <h2>Oi, Sofia! 👋</h2>
+      <p>Escolha uma fase para começar sua aventura matemática.</p>
+
+      <div class="fases">
+        <button onclick="iniciarQuiz('tabuada')">🏆 Fase 1: Tabuada</button>
+        <button onclick="iniciarQuiz('divisao')">🍕 Fase 2: Divisão</button>
+        <button onclick="iniciarQuiz('fracoes')">🧩 Fase 3: Frações</button>
+        <button onclick="iniciarQuiz('problemas')">🛒 Fase 4: Probleminhas</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="tela">
+    <div class="card">
+      <p class="progresso">
+        Pergunta <span id="numeroPergunta">1</span> de <span id="totalPerguntas">5</span>
+      </p>
+
+      <div class="barra">
+        <div id="barraInterna"></div>
+      </div>
+
+      <h2 id="perguntaTexto">Pergunta aqui</h2>
+
+      <div id="opcoes" class="opcoes"></div>
+
+      <p class="pontos">⭐ Pontos: <span id="pontos">0</span></p>
+    </div>
+  </section>
+
+  <section id="resultado" class="tela">
+    <div class="card principal">
+      <h2 id="tituloResultado">Resultado</h2>
+      <p id="mensagemResultado"></p>
+      <p class="nota">⭐ Pontuação final: <span id="pontuacaoFinal">0</span></p>
+
+      <button class="voltar" onclick="voltarInicio()">Voltar ao início</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Feito com ❤️ para a Sofia estudar matemática</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
