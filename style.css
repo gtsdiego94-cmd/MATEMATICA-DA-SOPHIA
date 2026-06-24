@@ -1,1 +1,149 @@
 body{font-family:Arial,sans-serif;background:#f6f8ff;text-align:center;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f8ff;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+main {
+  padding: 25px 15px;
+  min-height: 70vh;
+}
+
+.tela {
+  display: none;
+}
+
+.tela.ativa {
+  display: block;
+}
+
+.card {
+  background: white;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.principal {
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.fases {
+  display: grid;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+button {
+  border: none;
+  border-radius: 18px;
+  padding: 18px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ff6b6b;
+  color: white;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.opcoes {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.opcoes button {
+  background: #4ecdc4;
+  text-align: left;
+}
+
+.progresso,
+.pontos,
+.nota {
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.barra {
+  background: #ddd;
+  border-radius: 20px;
+  height: 12px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+#barraInterna {
+  height: 100%;
+  width: 0%;
+  background: #ff6b6b;
+  transition: 0.3s;
+}
+
+.voltar {
+  background: #4ecdc4;
+  margin-top: 20px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .card h2 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
