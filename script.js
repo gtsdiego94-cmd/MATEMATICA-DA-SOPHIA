@@ -1,114 +1,116 @@
 console.log('Matemática da Sofia carregada');
 const perguntas = {
-  tabuada: [
+  idade10: [
     {
       pergunta: "Quanto é 3 × 4?",
       opcoes: ["7", "12", "14", "16"],
       resposta: "12"
     },
     {
-      pergunta: "Quanto é 5 × 6?",
-      opcoes: ["30", "25", "35", "40"],
+      pergunta: "Quanto é 5 + 6?",
+      opcoes: ["9", "10", "11", "12"],
+      resposta: "11"
+    },
+    {
+      pergunta: "Quanto é 20 ÷ 4?",
+      opcoes: ["3", "4", "5", "6"],
+      resposta: "5"
+    },
+    {
+      pergunta: "Qual número vem depois de 29?",
+      opcoes: ["28", "29", "30", "31"],
       resposta: "30"
     },
     {
-      pergunta: "Quanto é 8 × 2?",
-      opcoes: ["10", "12", "16", "18"],
-      resposta: "16"
+      pergunta: "Se uma caixa tem 8 lápis e você ganha mais 2, quantos lápis tem?",
+      opcoes: ["9", "10", "11", "12"],
+      resposta: "10"
     },
     {
-      pergunta: "Quanto é 7 × 3?",
-      opcoes: ["21", "24", "18", "28"],
-      resposta: "21"
-    },
-    {
-      pergunta: "Quanto é 9 × 5?",
-      opcoes: ["40", "45", "50", "55"],
-      resposta: "45"
+      pergunta: "Quanto é 7 × 2?",
+      opcoes: ["12", "13", "14", "15"],
+      resposta: "14"
     }
   ],
 
-  divisao: [
+  idade11: [
     {
-      pergunta: "Se 12 balas forem divididas entre 3 crianças, quantas balas cada uma recebe?",
-      opcoes: ["3", "4", "5", "6"],
-      resposta: "4"
+      pergunta: "Quanto é 7 × 8?",
+      opcoes: ["54", "56", "58", "60"],
+      resposta: "56"
     },
     {
-      pergunta: "Quanto é 20 ÷ 5?",
-      opcoes: ["2", "3", "4", "5"],
-      resposta: "4"
-    },
-    {
-      pergunta: "Quanto é 18 ÷ 3?",
-      opcoes: ["5", "6", "7", "8"],
+      pergunta: "Quanto é 36 ÷ 6?",
+      opcoes: ["4", "5", "6", "7"],
       resposta: "6"
     },
     {
-      pergunta: "Se 24 figurinhas forem divididas entre 4 amigos, quantas ficam para cada um?",
-      opcoes: ["4", "5", "6", "8"],
-      resposta: "6"
+      pergunta: "Metade de 18 é:",
+      opcoes: ["6", "7", "8", "9"],
+      resposta: "9"
     },
     {
-      pergunta: "Quanto é 30 ÷ 10?",
-      opcoes: ["2", "3", "4", "5"],
-      resposta: "3"
-    }
-  ],
-
-  fracoes: [
-    {
-      pergunta: "Metade de uma pizza representa qual fração?",
-      opcoes: ["1/2", "1/3", "1/4", "2/3"],
-      resposta: "1/2"
-    },
-    {
-      pergunta: "Se uma barra de chocolate foi dividida em 4 partes iguais e você comeu 1, qual fração você comeu?",
-      opcoes: ["1/2", "1/4", "3/4", "4/4"],
-      resposta: "1/4"
-    },
-    {
-      pergunta: "Qual fração representa um inteiro completo?",
-      opcoes: ["1/2", "2/4", "4/4", "1/3"],
-      resposta: "4/4"
-    },
-    {
-      pergunta: "Qual é maior?",
-      opcoes: ["1/2", "1/4", "1/8", "1/10"],
-      resposta: "1/2"
-    },
-    {
-      pergunta: "Duas partes de quatro partes iguais representam:",
+      pergunta: "Qual fração representa 2 partes de 4?",
       opcoes: ["1/4", "2/4", "3/4", "4/4"],
       resposta: "2/4"
+    },
+    {
+      pergunta: "Se 3 pacotes têm 5 figurinhas cada, quantas figurinhas há?",
+      opcoes: ["12", "13", "14", "15"],
+      resposta: "15"
+    },
+    {
+      pergunta: "Quanto é 45 + 27?",
+      opcoes: ["62", "72", "70", "68"],
+      resposta: "72"
+    },
+    {
+      pergunta: "Quanto é 100 - 37?",
+      opcoes: ["53", "63", "73", "83"],
+      resposta: "63"
     }
   ],
 
-  problemas: [
+  idade12: [
     {
-      pergunta: "Sofia comprou 3 pacotes com 4 lápis em cada. Quantos lápis ela tem?",
-      opcoes: ["7", "10", "12", "14"],
+      pergunta: "Quanto é 9 × 7?",
+      opcoes: ["63", "64", "65", "66"],
+      resposta: "63"
+    },
+    {
+      pergunta: "Quanto é 84 ÷ 7?",
+      opcoes: ["10", "11", "12", "13"],
       resposta: "12"
     },
     {
-      pergunta: "Pedro tinha 20 reais e gastou 8. Quanto sobrou?",
-      opcoes: ["10", "12", "14", "16"],
-      resposta: "12"
+      pergunta: "Qual é maior: 3/4 ou 1/2?",
+      opcoes: ["3/4", "1/2", "São iguais", "Não dá"],
+      resposta: "3/4"
     },
     {
-      pergunta: "Uma caixa tem 6 maçãs. Quantas maçãs há em 4 caixas?",
-      opcoes: ["18", "20", "24", "30"],
-      resposta: "24"
+      pergunta: "Quanto é 2/3 de 12?",
+      opcoes: ["4", "6", "8", "10"],
+      resposta: "8"
     },
     {
-      pergunta: "Sofia leu 5 páginas por dia durante 6 dias. Quantas páginas ela leu?",
-      opcoes: ["25", "30", "35", "40"],
-      resposta: "30"
+      pergunta: "Se um ônibus leva 24 alunos e 6 saem, quantos continuam?",
+      opcoes: ["16", "18", "20", "22"],
+      resposta: "18"
     },
     {
-      pergunta: "Há 15 brinquedos para dividir entre 5 crianças. Quantos brinquedos cada uma recebe?",
-      opcoes: ["2", "3", "4", "5"],
-      resposta: "3"
+      pergunta: "Quanto é 125 + 38?",
+      opcoes: ["153", "163", "173", "183"],
+      resposta: "163"
+    },
+    {
+      pergunta: "Quanto é 5 × 6 + 4?",
+      opcoes: ["34", "30", "24", "28"],
+      resposta: "34"
+    },
+    {
+      pergunta: "Quanto é 90 - 27?",
+      opcoes: ["53", "63", "73", "83"],
+      resposta: "63"
     }
   ]
 };
@@ -186,13 +188,14 @@ function atualizarBarra() {
 function mostrarResultado() {
   document.getElementById("pontuacaoFinal").textContent = pontos;
 
+  const porcentagem = Math.round((pontos / (quizAtual.length * 20)) * 100);
   let titulo = "";
   let mensagem = "";
 
-  if (pontos >= 80) {
+  if (porcentagem >= 80) {
     titulo = "🏆 Parabéns, Sofia!";
     mensagem = "Você mandou muito bem! Continue assim.";
-  } else if (pontos >= 60) {
+  } else if (porcentagem >= 60) {
     titulo = "👏 Muito bom!";
     mensagem = "Você está aprendendo. Vamos praticar mais um pouco.";
   } else {
