@@ -151,8 +151,12 @@ let contadorTrofeus = Number(localStorage.getItem(chaveTrofeus) || 0);
 
 function atualizarContadorTrofeus() {
   const elemento = document.getElementById('contadorTrofeus');
+  const icones = document.getElementById('trofeusIcones');
   if (elemento) {
     elemento.textContent = contadorTrofeus;
+  }
+  if (icones) {
+    icones.textContent = '🏆'.repeat(Math.min(contadorTrofeus, 5));
   }
 }
 
