@@ -9,6 +9,11 @@
 <body>
 
 <header>
+  <div class="premiacao" id="premiacao">
+    <span class="premiacao-badge" id="premiacaoBadge">
+      🏆 Premiações: <span id="contadorTrofeus">0</span>
+    </span>
+  </div>
   <h1>🌟 Matemática da Sofia</h1>
   <p>Aprendendo com calma, alegria e confiança</p>
 </header>
@@ -23,6 +28,7 @@
         <button onclick="iniciarQuiz('idade10')">🧸 Nível 1: 10 anos</button>
         <button onclick="iniciarQuiz('idade11')">🌈 Nível 2: 11 anos</button>
         <button onclick="iniciarQuiz('idade12')">⭐ Nível 3: 12 anos</button>
+        <button onclick="iniciarQuiz('ciencia')">🧪 Perguntas de Ciências</button>
       </div>
     </div>
   </section>
@@ -47,6 +53,7 @@
 
   <section id="resultado" class="tela">
     <div class="card principal">
+      <div id="trofeu" class="trofeu">🏆</div>
       <h2 id="tituloResultado">Resultado</h2>
       <p id="mensagemResultado"></p>
       <p class="nota">⭐ Pontuação final: <span id="pontuacaoFinal">0</span></p>

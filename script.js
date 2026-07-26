@@ -112,12 +112,49 @@ const perguntas = {
       opcoes: ["53", "63", "73", "83"],
       resposta: "63"
     }
+  ],
+
+  ciencia: [
+    {
+      pergunta: "Qual planeta é conhecido como o Planeta Vermelho?",
+      opcoes: ["Vênus", "Marte", "Júpiter", "Saturno"],
+      resposta: "Marte"
+    },
+    {
+      pergunta: "O que as plantas precisam para fazer fotossíntese?",
+      opcoes: ["Areia", "Luz do sol", "Gelo", "Papel"],
+      resposta: "Luz do sol"
+    },
+    {
+      pergunta: "Qual parte da planta absorve água do solo?",
+      opcoes: ["Flor", "Raiz", "Folha", "Fruto"],
+      resposta: "Raiz"
+    },
+    {
+      pergunta: "Qual processo transforma água líquida em vapor?",
+      opcoes: ["Condensação", "Evaporação", "Fusão", "Solidificação"],
+      resposta: "Evaporação"
+    },
+    {
+      pergunta: "Que gás as pessoas respiram?",
+      opcoes: ["Oxigênio", "Dióxido de carbono", "Nitrogênio", "Hidrogênio"],
+      resposta: "Oxigênio"
+    }
   ]
 };
 
 let quizAtual = [];
 let indice = 0;
 let pontos = 0;
+const chaveTrofeus = 'sophiaTrofeus';
+let contadorTrofeus = Number(localStorage.getItem(chaveTrofeus) || 0);
+
+function atualizarContadorTrofeus() {
+  const elemento = document.getElementById('contadorTrofeus');
+  if (elemento) {
+    elemento.textContent = contadorTrofeus;
+  }
+}
 
 function mostrarTela(id) {
   document.querySelectorAll(".tela").forEach(tela => {
@@ -189,18 +226,33 @@ function mostrarResultado() {
   document.getElementById("pontuacaoFinal").textContent = pontos;
 
   const porcentagem = Math.round((pontos / (quizAtual.length * 20)) * 100);
+  const trofeu = document.getElementById("trofeu");
+  const badge = document.getElementById("premiacaoBadge");
   let titulo = "";
   let mensagem = "";
 
   if (porcentagem >= 80) {
+    contadorTrofeus += 1;
+    localStorage.setItem(chaveTrofeus, contadorTrofeus);
+    atualizarContadorTrofeus();
+
+    if (badge) {
+      badge.classList.remove('ganhou');
+      void badge.offsetWidth;
+      badge.classList.add('ganhou');
+    }
+
     titulo = "🏆 Parabéns, Sofia!";
-    mensagem = "Você mandou muito bem! Continue assim.";
+    mensagem = "Você acertou mais de 80%! Você merece um troféu!";
+    trofeu.style.display = "block";
   } else if (porcentagem >= 60) {
     titulo = "👏 Muito bom!";
     mensagem = "Você está aprendendo. Vamos praticar mais um pouco.";
+    trofeu.style.display = "none";
   } else {
     titulo = "💪 Continue tentando!";
     mensagem = "Errar faz parte do aprendizado. Você consegue!";
+    trofeu.style.display = "none";
   }
 
   document.getElementById("tituloResultado").textContent = titulo;
@@ -212,3 +264,5 @@ function mostrarResultado() {
 function voltarInicio() {
   mostrarTela("inicio");
 }
+
+atualizarContadorTrofeus();
