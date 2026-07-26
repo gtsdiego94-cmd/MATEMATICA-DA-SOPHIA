@@ -1,4 +1,3 @@
-body{font-family:Arial,sans-serif;background:#f6f8ff;text-align:center;}
 * {
   margin: 0;
   padding: 0;
@@ -6,35 +5,57 @@ body{font-family:Arial,sans-serif;background:#f6f8ff;text-align:center;}
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f6f8ff;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, rgba(94,149,255,0.15), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(16,185,129,0.14), transparent 22%),
+              #e7efff;
+  color: #102a43;
+  text-align: center;
+  min-height: 100vh;
 }
 
 header {
-  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-  color: white;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a 72%);
+  color: #f8fafc;
   text-align: center;
-  padding: 35px 20px;
+  padding: 40px 20px;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 22%),
+                    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 160px 160px, 20px 20px;
+  opacity: 0.45;
+  pointer-events: none;
 }
 
 .premiacao {
   display: flex;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
 }
 
 .premiacao-badge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255,255,255,0.95);
-  color: #ff6b6b;
-  padding: 10px 16px;
+  background: #f8fafc;
+  color: #0f172a;
+  padding: 12px 18px;
   border-radius: 999px;
-  font-weight: bold;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  border: 2px solid #fff3b0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 14px 28px rgba(15,23,42,0.15);
+  border: 1px solid rgba(15,23,42,0.08);
+  text-transform: uppercase;
+  font-size: 0.95rem;
 }
 
 .trofeus-icones {
@@ -47,26 +68,31 @@ header {
 }
 
 @keyframes celebracao {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header p {
-  font-size: 1.1rem;
-  margin-top: 10px;
+  font-size: 1.05rem;
+  color: rgba(248,250,252,0.88);
+  margin-top: 14px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
-  padding: 25px 15px;
-  min-height: 70vh;
+  padding: 30px 18px;
+  min-height: 72vh;
 }
 
 .tela {
@@ -78,12 +104,26 @@ main {
 }
 
 .card {
-  background: white;
-  max-width: 700px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  max-width: 760px;
   margin: 0 auto;
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 32px;
+  border-radius: 32px;
+  box-shadow: 0 22px 40px rgba(15,23,42,0.12);
+  border: 1px solid rgba(15,23,42,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(56,189,248,0.18), transparent 55%);
+  pointer-events: none;
 }
 
 .principal {
@@ -92,112 +132,119 @@ main {
 
 .card h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  color: #0f172a;
 }
 
 .card p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.14rem;
+  margin-bottom: 18px;
+  color: #334e68;
+  line-height: 1.65;
 }
 
 .fases {
   display: grid;
-  gap: 15px;
-  margin-top: 25px;
+  gap: 16px;
+  margin-top: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 button {
   border: none;
-  border-radius: 18px;
-  padding: 18px;
-  font-size: 1.1rem;
-  font-weight: bold;
+  border-radius: 20px;
+  padding: 18px 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
   cursor: pointer;
-  background: #ff6b6b;
-  color: white;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  color: #f8fafc;
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  box-shadow: 0 14px 22px rgba(234,88,12,0.18);
   width: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px rgba(234,88,12,0.25);
+  filter: brightness(1.02);
 }
 
 button:active {
-  transform: scale(0.98);
+  transform: translateY(-1px);
 }
 
 .opcoes {
   display: grid;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 14px;
+  margin-top: 22px;
 }
 
 .opcoes button {
-  background: #4ecdc4;
+  background: linear-gradient(135deg, #0ea5e9, #14b8a6);
   text-align: left;
 }
 
 .progresso,
 .pontos,
 .nota {
-  font-weight: bold;
-  color: #ff6b6b;
+  font-weight: 800;
+  color: #1e40af;
 }
 
 .barra {
-  background: #ddd;
-  border-radius: 20px;
-  height: 12px;
+  background: rgba(15,23,42,0.08);
+  border-radius: 999px;
+  height: 14px;
   overflow: hidden;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 #barraInterna {
   height: 100%;
   width: 0%;
-  background: #ff6b6b;
-  transition: 0.3s;
+  background: linear-gradient(135deg, #22c55e, #38bdf8);
+  transition: width 0.3s ease;
 }
 
 .voltar {
-  background: #4ecdc4;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
   margin-top: 20px;
 }
 
 footer {
-  background: #333;
-  color: white;
+  background: #0f172a;
+  color: #cbd5e1;
   text-align: center;
-  padding: 25px 15px;
+  padding: 24px 18px;
+  font-size: 0.95rem;
 }
 
 .trofeu {
   display: none;
   font-size: 3rem;
-  margin-bottom: 10px;
-  animation: pulse 1s infinite;
+  margin-bottom: 14px;
+  animation: pulse 1.1s infinite alternate;
 }
 
 @keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
+@media (max-width: 720px) {
+  header h1 { font-size: 2.2rem; }
+  .card { padding: 26px; }
+  .premiacao-badge { font-size: 0.9rem; padding: 10px 14px; }
+}
 
-  .card {
-    padding: 22px;
-  }
+@media (max-width: 520px) {
+  .fases { grid-template-columns: 1fr; }
+  header { padding: 32px 16px; }
+  .card { border-radius: 24px; }
+}
 
   .card h2 {
     font-size: 1.6rem;

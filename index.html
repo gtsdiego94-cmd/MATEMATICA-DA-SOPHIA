@@ -15,39 +15,42 @@
       <span>Premiações: <span id="contadorTrofeus">0</span></span>
     </div>
   </div>
-  <h1>🌟 Matemática da Sofia</h1>
-  <p>Aprendendo com calma, alegria e confiança</p>
+  <h1>Academia Matemática da Sofia</h1>
+  <p>Treine o raciocínio como se fosse um atleta do conhecimento.</p>
 </header>
 
 <main>
   <section id="inicio" class="tela ativa">
     <div class="card principal">
-      <h2>Oi, Sofia! 👋</h2>
-      <p>Escolha um nível para começar sua aventura matemática.</p>
+      <h2>Bem-vinda ao campo de treino</h2>
+      <p>Escolha sua jornada: desafios por idade ou uma rodada rápida de ciências.</p>
 
       <div class="fases">
-        <button onclick="iniciarQuiz('idade10')">🧸 Nível 1: 10 anos</button>
-        <button onclick="iniciarQuiz('idade11')">🌈 Nível 2: 11 anos</button>
-        <button onclick="iniciarQuiz('idade12')">⭐ Nível 3: 12 anos</button>
-        <button onclick="iniciarQuiz('ciencia')">🧪 Perguntas de Ciências</button>
+        <button onclick="iniciarQuiz('idade10')">🏅 Nível 1: 10 anos</button>
+        <button onclick="iniciarQuiz('idade11')">⚡ Nível 2: 11 anos</button>
+        <button onclick="iniciarQuiz('idade12')">🚀 Nível 3: 12 anos</button>
+        <button onclick="iniciarQuiz('ciencia')">🔬 Quiz de Ciências</button>
+      </div>
+
+      <div class="descricao-extra">
+        <p>Cada acerto soma pontos e aproxima você do pódio da Sofia!</p>
       </div>
     </div>
   </section>
 
   <section id="quiz" class="tela">
     <div class="card">
-      <p class="progresso">
-        Pergunta <span id="numeroPergunta">1</span> de <span id="totalPerguntas">5</span>
-      </p>
+      <div class="status-bar">
+        <p class="progresso">Pergunta <span id="numeroPergunta">1</span> de <span id="totalPerguntas">5</span></p>
+        <span class="meta">Mantenha o foco e marque pontos.</span>
+      </div>
 
       <div class="barra">
         <div id="barraInterna"></div>
       </div>
 
       <h2 id="perguntaTexto">Pergunta aqui</h2>
-
       <div id="opcoes" class="opcoes"></div>
-
       <p class="pontos">⭐ Pontos: <span id="pontos">0</span></p>
     </div>
   </section>
@@ -55,17 +58,16 @@
   <section id="resultado" class="tela">
     <div class="card principal">
       <div id="trofeu" class="trofeu">🏆</div>
-      <h2 id="tituloResultado">Resultado</h2>
+      <h2 id="tituloResultado">Missão concluída</h2>
       <p id="mensagemResultado"></p>
       <p class="nota">⭐ Pontuação final: <span id="pontuacaoFinal">0</span></p>
-
       <button class="voltar" onclick="voltarInicio()">Voltar ao início</button>
     </div>
   </section>
 </main>
 
 <footer>
-  <p>Feito com ❤️ para a Sofia estudar matemática</p>
+  <p>Feito com 💙 para a Sofia treinar matemática com estilo.</p>
 </footer>
 
 <script src="script.js"></script>
