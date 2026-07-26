@@ -98,9 +98,9 @@ const perguntas = {
       resposta: "18"
     },
     {
-      pergunta: "Quanto é 125 + 38?",
-      opcoes: ["153", "163", "173", "183"],
-      resposta: "163"
+      pergunta: "Quanto é 125 + 25?",
+      opcoes: ["150", "153", "163", "173"],
+      resposta: "150"
     },
     {
       pergunta: "Quanto é 5 × 6 + 4?",
